@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Apuestas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>📘 Registro de Apuestas</h1>
+
+    <form id="bet-form">
+        <label>Deporte:
+            <input type="text" id="sport" value="Fútbol">
+        </label>
+        <label>Apuesta:
+            <input type="text" id="bet" placeholder="1x2 - +0.5">
+        </label>
+        <label>Cuota:
+            <input type="number" id="odds" step="0.01" required>
+        </label>
+        <label>Cantidad apostada:
+            <input type="number" id="amount" value="25000" required>
+        </label>
+        <button type="submit">Registrar apuesta</button>
+    </form>
+
+    <section id="filters">
+        <button onclick="showTopSport()">⚽ Deporte más rentable</button>
+        <button onclick="deleteAllBets()">Eliminar apuestas</button>
+    </section>
+
+    <div class="main-content">
+        <ul id="bet-list"></ul>
+        <div id="summary">
+            <h2>📊 Resumen</h2>
+            <p><strong>Total ganado:</strong> <span id="total-ganado">$0</span></p>
+            <p><strong>Total perdido:</strong> <span id="total-perdido">$0</span></p>
+            <p><strong>Total:</strong> <span id="total-neto">$0</span></p>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
